@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -a | awk -v RS= -v ORS=, '{print (($0 ~ /^[a-zA-Z0-9]/)?$0:$0"/")}' | sort | sed 's/,$/\n/'
